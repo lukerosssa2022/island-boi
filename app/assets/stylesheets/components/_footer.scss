@@ -1,0 +1,33 @@
+.footer {
+  background: #545775;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: white
+}
+.footer-links a{
+  color: white;
+  opacity: 9.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  color:#718F94;
+  font-family: monospace;
+}
+
+.footerbody{
+  background: #545775;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: white
+}
