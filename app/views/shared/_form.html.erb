@@ -1,0 +1,12 @@
+<div id="form-container" class="container">
+  <%= simple_form_for(island) do |f| %>
+    <div id="info">
+      <%= f.input :name, placeholder: "" %>
+      <%= f.input :country, as: :country, selected: island.country %>
+      <%= f.input :size, placeholder: "" %>
+      <%= f.input :price_per_day, placeholder: "" %>
+      <%= f.input :description, as: :text %>
+      <%= f.submit "Submit", class: "button" %>
+    </div>
+  <% end %>
+</div>
