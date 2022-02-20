@@ -7,6 +7,7 @@ class CreateIslands < ActiveRecord::Migration[7.0]
       t.integer :price_per_day
       t.boolean :avilable
       t.integer :size
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
