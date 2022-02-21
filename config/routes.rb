@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :islands, only: %i[index new create destroy show]
   resources :bookings, only: %i[new create]
 
+  resource :dashboard, only: :show
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
