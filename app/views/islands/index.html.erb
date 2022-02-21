@@ -1,1 +1,34 @@
-<h1>Hello from view/islands/index</h1>
+<h1>List of islands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Description</th>
+      <th>Price per day</th>
+      <th>Avilable?</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @islands.each do |island| %>
+      <tr>
+        <td><%= island.name %></td>
+        <td><%= island.country %></td>
+        <td><%= island.description %></td>
+        <td><%= island.price_per_day %></td>
+        <td><%= island.avilable %></td>
+        <td><%= island.size %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%# ARCHIVE %>
+
+<%# To make the island name a link that redirect to show, when a show method will be a thing %>
+
+<%# link_to island.name, island_path(island) %>
