@@ -1,18 +1,158 @@
 <%= render "shared/hero" %>
-<%= render "shared/card" %>
+<%# <%= render "shared/card" %>
+<h1 class = 'Title'>Find the island of your dreams</h1>
+<div class="carousels">
+<p>If you want to rent a island </p>
+<section class="carousel" aria-label="Gallery">
 
-  <div class ="image-card">
-  </div>
- <div class ="card-country">
-    <h1>step 1 </h1>
-   <p> Register as a user</p>
 
-  <h1>step 2 </h1>
-  <p>choose your island</p>
-  <h1>step 3 </h1>
-  <p>select the date that you want to go to holidays</p>
-   <h1>step 2 </h1>
-    </div>
-   </div>
+  <ol class="carousel__viewport">
 
-<%= render partial: "shared/card", locals: { header: "Step 1", subheader: "Register as a user" }%>
+    <li id="carousel__slide1" style="background-image: url('https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');"
+        tabindex="0"
+        class="carousel__slide">
+        <div class="carousel__slide--content">
+          <p> Register as a user </p>
+        </div>
+      <div class="carousel__snapper">
+        <a href="#carousel__slide4"
+           class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide2"
+           class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+    <li id="carousel__slide2" style="background-image: url('https://media.istockphoto.com/photos/calendar-page-flipping-sheet-on-wood-table-background-business-picture-id1288509858?b=1&k=20&m=1288509858&s=170667a&w=0&h=YSB_acGyBTH8-gR87TbbQ5X4mYTVi-p6IxjzGM28RH8=');"
+        tabindex="0"
+        class="carousel__slide">
+             <div class="carousel__slide--content">
+          <p> Select the dates you want to go to your island  </p>
+        </div>
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide1"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide3"
+         class="carousel__next">Go to next slide</a>
+    </li>
+    <li id="carousel__slide3" style="background-image: url('https://images.unsplash.com/photo-1587538716374-408bb1118e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGlzbGFuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');"
+        tabindex="0"
+        class="carousel__slide">
+             <div class="carousel__slide--content">
+          <p> Select your island  </p>
+        </div>
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide2"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide4"
+         class="carousel__next">Go to next slide</a>
+    </li>
+    <li id="carousel__slide4" style="background-image: url('https://media.istockphoto.com/photos/private-jet-on-airport-runway-picture-id1073242890?b=1&k=20&m=1073242890&s=170667a&w=0&h=X_7Sj3iXhKxRuSEWxPFUJnVAcVZ1AmG8eyaDjV3qFB4=');"
+        tabindex="0"
+        class="carousel__slide">
+             <div class="carousel__slide--content">
+          <p> Enjoy your trip </p>
+        </div>
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide3"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide1"
+         class="carousel__next">Go to first slide</a>
+    </li>
+  </ol>
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide1"
+           class="carousel__navigation-button">Go to slide 1</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide2"
+           class="carousel__navigation-button">Go to slide 2</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide3"
+           class="carousel__navigation-button">Go to slide 3</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide4"
+           class="carousel__navigation-button">Go to slide 4</a>
+      </li>
+    </ol>
+  </aside>
+</section>
+<p class ="carousel-text"> If you rent your island</p>
+<section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+
+    <li id="carousel__slide1" style="background-image: url('https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');"
+        tabindex="0"
+        class="carousel__slide">
+        <div class="carousel__slide--content">
+          <p>  Register like a owner </p>
+        </div>
+      <div class="carousel__snapper">
+        <a href="#carousel__slide4"
+           class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide2"
+           class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+    <li id="carousel__slide2" style="background-image: url('https://media.istockphoto.com/photos/calendar-page-flipping-sheet-on-wood-table-background-business-picture-id1288509858?b=1&k=20&m=1288509858&s=170667a&w=0&h=YSB_acGyBTH8-gR87TbbQ5X4mYTVi-p6IxjzGM28RH8=');"
+        tabindex="0"
+        class="carousel__slide">
+             <div class="carousel__slide--content">
+          <p>
+          Select the dates you want to rent to your island   </p>
+        </div>
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide1"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide3"
+         class="carousel__next">Go to next slide</a>
+    </li>
+    <li id="carousel__slide3" style="background-image: url('https://images.unsplash.com/photo-1564846824194-346b7871b855?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29udHJhY3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');"
+        tabindex="0"
+        class="carousel__slide">
+             <div class="carousel__slide--content">
+          <p>sign a contract with the tenant of your island </p>
+        </div>
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide2"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide4"
+         class="carousel__next">Go to next slide</a>
+    </li>
+    <li id="carousel__slide4" style="background-image: url('https://images.unsplash.com/photo-1587538716374-408bb1118e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGlzbGFuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');"
+        tabindex="0"
+        class="carousel__slide">
+             <div class="carousel__slide--content">
+          <p> Rent your island</p>
+        </div>
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide3"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide1"
+         class="carousel__next">Go to first slide</a>
+    </li>
+  </ol>
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide1"
+           class="carousel__navigation-button">Go to slide 1</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide2"
+           class="carousel__navigation-button">Go to slide 2</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide3"
+           class="carousel__navigation-button">Go to slide 3</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide4"
+           class="carousel__navigation-button">Go to slide 4</a>
+      </li>
+    </ol>
+  </aside>
+</section>
+</div>
