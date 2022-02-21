@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :islands
   has_many :bookings
+  has_many :received_bookings, through: :islands, source: :bookings
 
   validates :email, presence: true, uniqueness: true
 end
