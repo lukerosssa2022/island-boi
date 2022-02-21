@@ -11,10 +11,7 @@ class BookingsController < ApplicationController
     end
   end
 
-  def accept
-  end
-
-  def refuse
+  def update
   end
 
   private
