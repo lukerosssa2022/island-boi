@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :islands, only: %i[index new create destroy show]
-  resources :bookings, only: %i[new create]
+  resources :islands, only: %i[index new create destroy show] do
+    resources :bookings, only: %i[new create]
+  end
 
   resource :dashboard, only: :show
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
