@@ -1,3 +1,18 @@
 <%= render "shared/hero" %>
-<h1>header</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "shared/card" %>
+
+  <div class ="image-card">
+  </div>
+ <div class ="card-country">
+    <h1>step 1 </h1>
+   <p> Register as a user</p>
+
+  <h1>step 2 </h1>
+  <p>choose your island</p>
+  <h1>step 3 </h1>
+  <p>select the date that you want to go to holidays</p>
+   <h1>step 2 </h1>
+    </div>
+   </div>
+
+<%= render partial: "shared/card", locals: { header: "Step 1", subheader: "Register as a user" }%>
