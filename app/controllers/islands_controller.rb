@@ -1,5 +1,7 @@
 class IslandsController < ApplicationController
 
+before_action :find_island, only: [:edit, :destroy]
+
   def index
     @islands = Island.all
   end
@@ -11,8 +13,6 @@ class IslandsController < ApplicationController
 
   def edit
   end
-
-
 
   def new
     @island = Island.new
@@ -34,15 +34,15 @@ class IslandsController < ApplicationController
 
   def destroy
     @island.destroy
-    if curent_user.island != []
-      redirect_to user_island_path, notice: "Island was deleted successfully"
-    else
-      redirect_to root_path, notice: "Island was deleted successfully"
-    end
+    redirect_to root_path, notice: "Island was deleted successfully"
   end
 
 
   private
+
+  def find_island
+    @island = Island.find(params[:id])
+  end
 
   def island_params
     params.require(:island).permit(:name, :country, :description, :price_per_day, :size)
