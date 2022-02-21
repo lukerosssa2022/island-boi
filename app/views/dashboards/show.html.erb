@@ -7,8 +7,8 @@
   <p>comment: <%= received_booking.comment %></p>
   <p>total price: <%= received_booking.total_price %></p>
   <% if received_booking.status == 'pending' %>
-    <%= link_to 'accept', bookings_path(received_booking, {state: 'accepted'}), method: :patch %>
-    <%= link_to 'decline', bookings_path(received_booking, {state: 'declined'}), method: :patch %>
+    <%= link_to 'accept', booking_path(received_booking, {status: 'accepted'}), method: :patch %>
+    <%= link_to 'decline', booking_path(received_booking, {status: 'declined'}), method: :patch %>
   <% elsif received_booking.status == 'accepted' %>
     <p>accepted</p>
   <% else %>
@@ -19,9 +19,10 @@
 
 <h3>applied bookings</h3>
 <% @applied_bookings.each do |applied_booking| %>
-  <p>start date<%=  %></p>
-  <p>end date<%=  %></p>
-  <p>total price<%=  %></p>
+  <p>start date: <%= applied_booking.start_date %></p>
+  <p>end date: <%= applied_booking.end_date %></p>
+  <p>total price: <%= applied_booking.total_price %></p>
+  <p>status: <%= applied_booking.status %></p>
 <% end %>
 
 <%# display all recived/applied bookings %>

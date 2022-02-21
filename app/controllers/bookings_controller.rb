@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.island = Island.find(params[:island_id])
-    @booking.state = 'pending'
+    @booking.status = 'pending'
     if @booking.save
       redirect_to dashboard_path, notice: "Great your booking was created"
     else
@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    @booking.state = params[:state]
+    @booking.status = params[:status]
     redirect_to dashboard_path if @booking.save
   end
 
