@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
 
   resources :islands, only: %i[index new create destroy show]
+  resources :bookings, only: %i[new create]
 
 
 

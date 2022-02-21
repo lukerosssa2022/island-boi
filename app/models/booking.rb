@@ -3,6 +3,6 @@ class Booking < ApplicationRecord
   belongs_to :island
 
   validate :start_date, precense: true
-  alidate :end_date, precense: true
+  validate :end_date, precense: true
 
 end
