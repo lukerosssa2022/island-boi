@@ -1,0 +1,29 @@
+.hero-image {
+  background-image: url(https://i.pinimg.com/originals/86/62/fa/8662fa3fb272119131f40ea71135f608.gif);
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: black;
+}
+
+.firsthead {
+  text-align: center;
+  font-size: 60px;
+  color: #DBCFB0;
+  cursor: default;
+  box-shadow: 10ch;
+  text-shadow: 10ch;
+}
+
+.secondhead {
+  text-align: center;
+  font-size: 25px;
+  color: #FFF;
+  cursor: default;
+}
+
+.btn1 {
+  text-align: center;
+}
