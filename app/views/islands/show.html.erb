@@ -1,1 +1,9 @@
-<h1>Hello from views/islands/show</h1>
+<h1><%= @island.name %></h1>
+<br>
+<h4>lays in the country: <%= @island.country %></h4>
+<h4>description: <%= @island.description %></h4>
+<h4>price per day: <%= @island.price_per_day %> $</h4>
+<h4>is it avilable? <%= @island.avilable %></h4>
+<h4>size: <%= @island.size %> cm</h4>
+<br>
+<%= link_to 'Back', islands_path %>
