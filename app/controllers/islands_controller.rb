@@ -17,6 +17,14 @@ class IslandsController < ApplicationController
     end
   end
 
+  def destroy
+    @island.destroy
+    if cuurent_user.island != []
+      redirect_to root_path, notice: "Island was deleted successfully"
+    else
+      redirect_to root_path, notice: "Island was deleted successfully"
+
+
   private
 
   def island_params

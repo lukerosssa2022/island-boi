@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   has_many :islands
   has_many :offers
-  has_many :orders
 
   validates :username, presence: true, uniqueness: true
 end
