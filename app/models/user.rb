@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :islands
-  has_many :offers
-  has_many :orders
+  has_many :bookings
+  has_many :received_bookings, through: :islands, source: :bookings
 
-  validates :username, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
 end

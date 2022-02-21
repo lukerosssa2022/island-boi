@@ -1,6 +1,16 @@
 class IslandsController < ApplicationController
+  before_action :find_island, only: %i[edit destroy]
+
   def index
     @islands = Island.all
+  end
+
+  def show
+    @island = Island.find(params[:id])
+    @booking = Booking.new
+  end
+
+  def edit
   end
 
   def new
@@ -17,9 +27,24 @@ class IslandsController < ApplicationController
     end
   end
 
+  def destroy
+    @island.destroy
+    redirect_to islands_path, notice: "Island was deleted successfully"
+  end
+
   private
+
+  def find_island
+    @island = Island.find(params[:id])
+  end
 
   def island_params
     params.require(:island).permit(:name, :country, :description, :price_per_day, :size)
   end
 end
+
+# ARCHIVE
+
+# def index_user
+# @user_islands = current_user.islands
+# end

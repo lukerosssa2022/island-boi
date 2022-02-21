@@ -1,9 +1,21 @@
 <h1><%= @island.name %></h1>
 <br>
-<h4>lays in the country: <%= @island.country %></h4>
-<h4>description: <%= @island.description %></h4>
-<h4>price per day: <%= @island.price_per_day %> $</h4>
-<h4>is it avilable? <%= @island.avilable %></h4>
-<h4>size: <%= @island.size %> cm</h4>
+<h4>Is in the country: <%= @island.country %></h4>
+<h4>Description: <%= @island.description %></h4>
+<h4>Price per day: <%= @island.price_per_day %> $</h4>
+<h4>Is it avilable? <%= @island.avilable %></h4>
+<h4>Size: <%= @island.size %> cm</h4>
 <br>
+<% if current_user == @island.user %>
+  <%= link_to 'Delete', island_path(@island), method: :delete, data: {confirm: 'confirm delete'} %>
+<% end %>
+
+<%=simple_form_for [@island, @booking] do |f|  %>
+  <%=f.input :start_date  %>
+  <%=f.input :end_date %>
+  <%=f.input :comment %>
+  <%=f.submit %>
+<% end %>
+
+
 <%= link_to 'Back', islands_path %>

@@ -15,7 +15,7 @@
   <tbody>
     <% @islands.each do |island| %>
       <tr>
-        <td><%= island.name %></td>
+        <td><%= link_to island.name, island_path(island) %></td>
         <td><%= island.country %></td>
         <td><%= island.description %></td>
         <td><%= island.price_per_day %></td>
@@ -25,10 +25,3 @@
     <% end %>
   </tbody>
 </table>
-
-
-<%# ARCHIVE %>
-
-<%# To make the island name a link that redirect to show, when a show method will be a thing %>
-
-<%# link_to island.name, island_path(island) %>

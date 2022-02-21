@@ -20,7 +20,7 @@ body{
   -webkit-font-smoothing: antialiased;
   line-height: 1.4;
   color:#718F94;
-  font-family: monospace;
+  font-family: "Comic Sans MS";
 }
 
 .footerbody{
@@ -29,7 +29,7 @@ body{
   align-items: center;
   padding-bottom: 38px;
   color: white;
-  font-family: monospace;
+  font-family: "Comic Sans MS";
   text-transform: inherit;
   font-size: 26px;
 }
@@ -40,7 +40,7 @@ body{
 .countries-list {
   list-style: none;
   padding: 0;
-  font-family: monospace;
+  font-family: "Comic Sans MS";
   display: flex;
   justify-content: space-between;
   width: 55%;
