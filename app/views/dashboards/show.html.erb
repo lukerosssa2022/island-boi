@@ -1,2 +1,35 @@
 <h1><%= @user.email %> dashboard</h1>
-<%# I dunno what should this page shows? %>
+
+<h3>recieved bookings:</h3>
+<% @received_bookings.each do |received_booking| %>
+  <p>start date: <%= received_booking.start_date %></p>
+  <p>end date: <%= received_booking.end_date %></p>
+  <p>comment: <%= received_booking.comment %></p>
+  <p>total price: <%= received_booking.total_price %></p>
+  <% if received_booking.status == 'pending' %>
+    <%= link_to 'accept', booking_path(received_booking, {status: 'accepted'}), method: :patch %>
+    <%= link_to 'decline', booking_path(received_booking, {status: 'declined'}), method: :patch %>
+  <% elsif received_booking.status == 'accepted' %>
+    <p>accepted</p>
+  <% else %>
+    <p>declined</p>
+  <% end %>
+<% end %>
+
+
+<h3>applied bookings</h3>
+<% @applied_bookings.each do |applied_booking| %>
+  <p>start date: <%= applied_booking.start_date %></p>
+  <p>end date: <%= applied_booking.end_date %></p>
+  <p>total price: <%= applied_booking.total_price %></p>
+  <p>status: <%= applied_booking.status %></p>
+<% end %>
+
+<%# display all recived/applied bookings %>
+<%# for the recieved bookings - add accpt/regect btn %>
+<%# applied bookings - see the status %>
+
+
+<%# 1. define applied booking/recived bookings (user model) %>
+<%# 2. add pending by default throught the bookings controller %>
+<%# 3. add accpt/deny btn next to pending booking request %>
