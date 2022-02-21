@@ -1,11 +1,11 @@
 class IslandsController < ApplicationController
+
   def index
     @islands = Island.all
   end
 
 
   def show
-    raise
     @island = Island.find(params[:id])
   end
 
@@ -28,7 +28,6 @@ class IslandsController < ApplicationController
     end
   end
 
-<<<<<<< HEAD
   #def index_user
   #  @user_islands = current_user.islands
   #end
@@ -41,14 +40,6 @@ class IslandsController < ApplicationController
       redirect_to root_path, notice: "Island was deleted successfully"
     end
   end
-=======
-  def destroy
-    @island.destroy
-    if cuurent_user.island != []
-      redirect_to root_path, notice: "Island was deleted successfully"
-    else
-      redirect_to root_path, notice: "Island was deleted successfully"
->>>>>>> main
 
 
   private
