@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.island = Island.find(params[:island_id])
     if @booking.save
-      redirect_to bookings_path, notice: "Great your booking was created"
+      redirect_to dashboard_path, notice: "Great your booking was created"
     else
       render "islands/show"
     end
