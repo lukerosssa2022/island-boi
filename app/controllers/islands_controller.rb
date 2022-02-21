@@ -1,7 +1,18 @@
 class IslandsController < ApplicationController
+
   def index
     @islands = Island.all
   end
+
+
+  def show
+    @island = Island.find(params[:id])
+  end
+
+  def edit
+  end
+
+
 
   def new
     @island = Island.new
@@ -16,6 +27,20 @@ class IslandsController < ApplicationController
       render :new
     end
   end
+
+  #def index_user
+  #  @user_islands = current_user.islands
+  #end
+
+  def destroy
+    @island.destroy
+    if curent_user.island != []
+      redirect_to user_island_path, notice: "Island was deleted successfully"
+    else
+      redirect_to root_path, notice: "Island was deleted successfully"
+    end
+  end
+
 
   private
 
