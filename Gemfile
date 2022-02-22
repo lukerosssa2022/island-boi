@@ -27,6 +27,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Add fake data to seed with Faker
+gem 'faker', '~> 2.10', '>= 2.10.2'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -54,6 +57,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'webpacker', '~> 3.0'
 gem 'devise'
+gem "geocoder"
 
 group :development, :test do
   gem 'pry-byebug'

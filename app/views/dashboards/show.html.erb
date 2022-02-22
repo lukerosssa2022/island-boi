@@ -7,8 +7,8 @@
   <p>comment: <%= received_booking.comment %></p>
   <p>total price: <%= received_booking.total_price %></p>
   <% if received_booking.status == 'pending' %>
-    <%= link_to 'accept', booking_path(received_booking, {status: 'accepted'}), method: :patch %>
-    <%= link_to 'decline', booking_path(received_booking, {status: 'declined'}), method: :patch %>
+    <%= button_to 'accept', booking_path(received_booking, {status: 'accepted'}), method: :patch %>
+    <%= button_to 'decline', booking_path(received_booking, {status: 'declined'}), method: :patch %>
   <% elsif received_booking.status == 'accepted' %>
     <p>accepted</p>
   <% else %>
@@ -25,6 +25,7 @@
   <p>status: <%= applied_booking.status %></p>
 <% end %>
 
+<%= link_to 'Back to all the islands', islands_path %>
 <%# display all recived/applied bookings %>
 <%# for the recieved bookings - add accpt/regect btn %>
 <%# applied bookings - see the status %>
