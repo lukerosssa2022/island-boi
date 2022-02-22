@@ -6,15 +6,18 @@
 <h4>Is it avilable? <%= @island.avilable %></h4>
 <h4>Size: <%= @island.size %> cm</h4>
 <br>
+<%# dose'nt ask me if i'm sure %>
 <% if current_user == @island.user %>
   <%= button_to 'Delete', island_path(@island), method: :delete, data: {confirm: 'confirm delete'} %>
 <% end %>
 
-<%=simple_form_for [@island, @booking] do |f|  %>
-  <%=f.input :start_date  %>
-  <%=f.input :end_date %>
-  <%=f.input :comment %>
-  <%=f.submit %>
+<% if current_user != @island.user %>
+  <%=simple_form_for [@island, @booking] do |f|  %>
+    <%=f.input :start_date  %>
+    <%=f.input :end_date %>
+    <%=f.input :comment %>
+    <%=f.submit %>
+  <% end %>
 <% end %>
 
 
