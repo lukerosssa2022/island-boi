@@ -57,6 +57,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'webpacker', '~> 3.0'
 gem 'devise'
+gem "geocoder"
 
 group :development, :test do
   gem 'pry-byebug'
