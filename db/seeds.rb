@@ -7,11 +7,28 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts 'cleaning DB'
-Island.destroy_all
-User.destroy_all
-puts 'DB is cleaned'
 
-puts 'Creating a single user & 2 islands...'
+puts '----BOOKINGS----'
+
+puts 'deleting all the bookings...'
+Booking.destroy_all
+puts 'bookings got deleted!'
+
+puts '----ISLANDS----'
+
+puts 'deleting all the islands...'
+Island.destroy_all
+puts 'islands got deleted!'
+
+puts '----USERS----'
+
+puts 'deleting all the users...'
+User.destroy_all
+puts 'users got deleted!'
+
+puts '----CREATE----'
+
+puts 'Creating a single user & 20 islands...'
 
 user1 = User.create!(
   email: 'ofek1997shitrit@gmail.com',
@@ -19,29 +36,43 @@ user1 = User.create!(
 )
 puts 'user was created'
 
-island1 = Island.new(
-  name: 'island 1',
-  country: 'Israel',
-  description: 'super cool',
-  price_per_day: 50,
-  avilable: true,
-  size: 500
-)
+20.times do
+  Island.create!(
+    name: Faker::JapaneseMedia::OnePiece.island,
+    country: Faker::Address.country,
+    description: 'super cool island, should book it now!',
+    price_per_day: rand(500..10_000),
+    avilable: true,
+    size: rand(20..100_000),
+    user_id: user1.id
+  )
+end
 
-island2 = Island.new(
-  name: 'island 2',
-  country: 'Germany',
-  description: 'kinda meh',
-  price_per_day: 30,
-  avilable: true,
-  size: 100
-)
+puts 'a single user & 20 islands were created'
+puts 'seed was implemented implemented!'
 
-island1.user = user1
-island2.user = user1
+# ARCHIVE
 
-island1.save
-island2.save
+# island1 = Island.new(
+#   name: 'island 1',
+#   country: 'Israel',
+#   description: 'super cool',
+#   price_per_day: 50,
+#   avilable: true,
+#   size: 500
+# )
 
-puts 'a single user & 2 islands were created'
-puts 'seed implemented!'
+# island2 = Island.new(
+#   name: 'island 2',
+#   country: 'Germany',
+#   description: 'kinda meh',
+#   price_per_day: 30,
+#   avilable: true,
+#   size: 100
+# )
+
+# island1.user = user1
+# island2.user = user1
+
+# island1.save
+# island2.save
