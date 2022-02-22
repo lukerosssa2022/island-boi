@@ -2,10 +2,17 @@
   margin-top: 16px;
 }
 
-h1{
+h2{
+  justify-content: center;
   font-family: monospace;
-  font-size: 28px;
+  display: flex;
+  font-size: 2rem;
+   line-height: 4;
+  align-items: center;
+  color: #90B494;
+  text-transform: uppercase;
 }
+
  .step-card{
    background-color: white;
  }
