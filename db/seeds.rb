@@ -28,13 +28,18 @@ puts 'users got deleted!'
 
 puts '----CREATE----'
 
-puts 'Creating a single user & 20 islands...'
+puts 'Creating 2 users & 20 islands...'
 
 user1 = User.create!(
   email: 'ofek1997shitrit@gmail.com',
   password: '1234512345'
 )
-puts 'user was created'
+
+user2 = User.create!(
+  email: 'luke1986@gmail.com',
+  password: '12345678'
+)
+puts '2 users were created'
 
 20.times do
   Island.create!(
@@ -44,11 +49,11 @@ puts 'user was created'
     price_per_day: rand(500..10_000),
     avilable: true,
     size: rand(20..100_000),
-    user_id: user1.id
+    user_id: [user1.id, user2.id].sample
   )
 end
 
-puts 'a single user & 20 islands were created'
+puts 'two users & 20 islands were created'
 puts 'seed was implemented implemented!'
 
 # ARCHIVE
