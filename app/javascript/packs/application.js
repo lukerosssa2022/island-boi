@@ -22,3 +22,13 @@ require("channels")
 
 import "controllers"
 import "bootstrap"
+// import {myFunction} from "app/javascript/channels/hamburger.js"
+// const hamburger = document.querySelector(".hamburger")
+// if (hamburger) {
+//   hamburger.addEventListener('click', () => {
+//     // Call your functions here, e.g:
+//     console.log('hello')
+//     myFunction;
+//     // initSelect2();
+//   });
+// }
