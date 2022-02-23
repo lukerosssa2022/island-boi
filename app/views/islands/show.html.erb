@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="islandesc">
   <h1><strong><%= @island.name %></strong></h1>
   <div class="descitems">
@@ -24,6 +25,16 @@
       <%# <strong>Size:</strong> <%= @island.size %> <%#%>
     </div>
 </div>
+=======
+<h1><%= @island.name %></h1>
+<br>
+<h4>Is in the country: <%= @island.territory %></h4>
+<h4>Description: <%= @island.description %></h4>
+<h4>Price per day: <%= @island.price_per_day %> $</h4>
+<h4>Is it avilable? <%= @island.avilable %></h4>
+<h4>Size: <%= @island.size %> cm</h4>
+<br>
+>>>>>>> main
 <%# dose'nt ask me if i'm sure %>
 <div class="islandact">
   <% if current_user == @island.user %>

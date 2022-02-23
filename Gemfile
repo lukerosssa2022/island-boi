@@ -58,6 +58,7 @@ gem 'simple_form'
 gem 'webpacker', '~> 3.0'
 gem 'devise'
 gem "geocoder"
+gem 'pg_search', '~> 2.3.0'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -65,7 +66,7 @@ group :development, :test do
   gem 'dotenv-rails'
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
