@@ -1,0 +1,35 @@
+.show-page-images {
+  display: flex;
+  // width: 800px;
+  height: 450px;
+}
+
+.show-page-image-left {
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50px 0 0 50px;
+  margin-right: 10px;
+}
+
+.show-page-images-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 50%;
+}
+
+.show-page-image-right {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  &:nth-child(2) {
+    border-radius: 0 50px 0 0;
+  }
+
+  &:nth-child(4) {
+    border-radius: 0 0 50px 0;
+  }
+}
