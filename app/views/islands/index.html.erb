@@ -4,6 +4,15 @@
 <br>
 <h1>List of islands</h1>
 
+<%= form_tag islands_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a island"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <div class="cards">
   <% @islands.each do |island| %>
     <div class="card-trip">
@@ -11,7 +20,7 @@
       <div class="card-trip-infos">
         <div class="island-info">
           <h2><%= link_to island.name, island_path(island) %></h2>
-          <p><%= island.country %></p>
+          <p><%= island.territory %></p>
           <p><%= island.description %></p>
           <p>Size: <%= island.size %></p>
         </div>
@@ -28,40 +37,6 @@
   <% end %>
 </div>
 
-<%= form_tag islands_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a island"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Description</th>
-      <th>Price per day</th>
-      <th>Avilable?</th>
-      <th>Size</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @islands.each do |island| %>
-      <tr>
-        <td><%= link_to island.name, island_path(island) %></td>
-        <td><%= island.territory %></td>
-        <td><%= island.description %></td>
-        <td><%= island.price_per_day %></td>
-        <td><%= island.avilable %></td>
-        <td><%= island.size %></td>
-      </tr>
-    <% end %>
-  </tbody>
-
-</table>
 <% if params[:query].present? %>
   <%= link_to 'Back', islands_path %>
 <% end %>

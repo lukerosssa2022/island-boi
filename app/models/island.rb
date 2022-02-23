@@ -1,6 +1,7 @@
 class Island < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_many_attached :photos
 
   COUNTRIES = ["Isreal", "Spain", "Germany", "South Africa"]
 
