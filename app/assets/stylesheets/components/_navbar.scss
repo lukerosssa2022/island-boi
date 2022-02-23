@@ -15,16 +15,22 @@
 }
 
 .nav-item {
-  background-color: white;
-  border-radius: 6px;
+  background-color: transparent;
 }
 
-.icon {
-  background: transparent;
+.navbar-light .navbar-nav .nav-link {
   color: white;
-  display: block;
-  position: absolute;
-  right: -8px;
-  top: 0;
-  margin: 16px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: white;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: transparent;
 }
