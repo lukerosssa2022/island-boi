@@ -4,7 +4,14 @@
 <br>
 <h1>List of islands</h1>
 
-<table data-controller="hello">
+<%= form_tag islands_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a island"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
   <thead>
     <tr>
       <th>Name</th>
@@ -29,5 +36,8 @@
     <% end %>
   </tbody>
 </table>
+<% if params[:query].present? %>
+  <%= link_to 'Back', islands_path %>
+<% end %>
 <%= link_to 'Create a new island', new_island_path %>
 <%= link_to 'Dashboard', dashboard_path %>

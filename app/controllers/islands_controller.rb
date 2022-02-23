@@ -2,7 +2,11 @@ class IslandsController < ApplicationController
   before_action :find_island, only: %i[edit destroy]
 
   def index
-    @islands = Island.all
+    if params[:query].present?
+      @islands = Island.global_search(params[:query])
+    else
+      @islands = Island.all
+    end
   end
 
   def show
