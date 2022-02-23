@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_23_111445) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_23_124048) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_23_111445) do
 
   create_table "islands", force: :cascade do |t|
     t.string "name"
-    t.string "country"
+    t.string "territory"
     t.string "description"
     t.integer "price_per_day"
     t.boolean "avilable"
