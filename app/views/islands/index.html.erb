@@ -1,6 +1,17 @@
+<br>
+<br>
+<br>
+<br>
 <h1>List of islands</h1>
 
-<table>
+<%= form_tag islands_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a island"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
   <thead>
     <tr>
       <th>Name</th>
@@ -16,7 +27,7 @@
     <% @islands.each do |island| %>
       <tr>
         <td><%= link_to island.name, island_path(island) %></td>
-        <td><%= island.country %></td>
+        <td><%= island.territory %></td>
         <td><%= island.description %></td>
         <td><%= island.price_per_day %></td>
         <td><%= island.avilable %></td>
@@ -25,5 +36,8 @@
     <% end %>
   </tbody>
 </table>
+<% if params[:query].present? %>
+  <%= link_to 'Back', islands_path %>
+<% end %>
 <%= link_to 'Create a new island', new_island_path %>
 <%= link_to 'Dashboard', dashboard_path %>
