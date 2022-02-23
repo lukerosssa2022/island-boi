@@ -20,7 +20,7 @@
     <% @islands.each do |island| %>
       <tr>
         <td><%= link_to island.name, island_path(island) %></td>
-        <td><%= island.country %></td>
+        <td><%= island.territory %></td>
         <td><%= island.description %></td>
         <td><%= island.price_per_day %></td>
         <td><%= island.avilable %></td>

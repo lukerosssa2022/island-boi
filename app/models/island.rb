@@ -4,5 +4,5 @@ class Island < ApplicationRecord
 
   COUNTRIES = ["Isreal", "Spain", "Germany", "South Africa"]
 
-  validates :name, :country, :price_per_day, :size, presence: true
+  validates :name, :territory, :price_per_day, :size, presence: true
 end

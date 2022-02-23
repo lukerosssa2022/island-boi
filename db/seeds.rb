@@ -44,7 +44,7 @@ puts '2 users were created'
 20.times do
   Island.create!(
     name: Faker::JapaneseMedia::OnePiece.island,
-    country: Faker::Address.country,
+    territory: Faker::Address.country,
     description: 'super cool island, should book it now!',
     price_per_day: rand(500..10_000),
     avilable: true,
