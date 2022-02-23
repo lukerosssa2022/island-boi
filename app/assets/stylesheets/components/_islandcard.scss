@@ -8,7 +8,6 @@
 }
 
 .card-trip > img {
-  height: 75%;
   width: 100%;
   object-fit: cover;
 }
@@ -34,7 +33,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  height: 25%;
+  padding: 12px;
 }
 
 .card-trip-infos .card-trip-user {
