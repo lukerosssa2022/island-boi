@@ -12,6 +12,7 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
+<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -35,6 +36,7 @@
       </tr>
     <% end %>
   </tbody>
+
 </table>
 <% if params[:query].present? %>
   <%= link_to 'Back', islands_path %>

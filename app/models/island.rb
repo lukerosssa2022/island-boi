@@ -6,9 +6,9 @@ class Island < ApplicationRecord
 
   validates :name, :territory, :price_per_day, :size, presence: true
   include PgSearch::Model
- 
+
   pg_search_scope :global_search,
-                  against: %i[name country description],
+                  against: %i[name territory description],
                   associated_against: {
                     user: [:email]
                   },
