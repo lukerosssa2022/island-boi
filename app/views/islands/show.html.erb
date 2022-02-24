@@ -46,7 +46,7 @@
 <%# dose'nt ask me if i'm sure %>
 <div class="islandact">
   <% if current_user == @island.user %>
-    <%= button_to 'Delete', island_path(@island), method: :delete, data: {confirm: 'confirm delete'}, class: "btn1" %>
+    <%= link_to 'Delete', island_path(@island), method: :delete, data: {confirm: 'confirm delete'}, class: "btn1" %>
   <% end %>
 
   <% if current_user != @island.user %>
